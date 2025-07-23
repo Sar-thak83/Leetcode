@@ -1,6 +1,6 @@
 class Solution {
 public:
-    typedef pair<int , int> p;
+    typedef pair<long long, int> p;
     int countPaths(int n, vector<vector<int>>& roads) {
         const int mod =1e9+7;
         vector<vector<pair<int, int>>> adj(n);
@@ -11,14 +11,14 @@ public:
             adj[u].push_back({v, w});
             adj[v].push_back({u, w});
         }
-        vector<int> distance(n, INT_MAX);
-        vector<int> ways(n, 0);
+        vector<long long> distance(n, LLONG_MAX);
+        vector<long long> ways(n, 0);
         priority_queue<p, vector<p>, greater<p>> pq;
         distance[0] = 0;
         ways[0] = 1;
         pq.push({0, 0});
         while (!pq.empty()) {
-            int dist = pq.top().first;
+            long long dist = pq.top().first;
             int node = pq.top().second;
             pq.pop();
             for (auto it : adj[node]) {
