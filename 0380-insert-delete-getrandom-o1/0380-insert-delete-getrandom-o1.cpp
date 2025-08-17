@@ -1,33 +1,25 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 class RandomizedSet {
-private:
-    vector<int> nums;                  
-    unordered_map<int, int> idx;       
-
 public:
-    RandomizedSet() {}
-
+    set<int> st;
+    RandomizedSet() {
+        
+    }
+    
     bool insert(int val) {
-        if (idx.find(val) != idx.end()) return false; 
-        nums.push_back(val);                
-        idx[val] = nums.size() - 1;         
-        return true;
+        if(st.find(val) == st.end()) {
+            st.insert(val);
+            return true;
+        }
+        return false;
     }
-
+    
     bool remove(int val) {
-        if (idx.find(val) == idx.end()) return false; 
-        int last = nums.back();             
-        int pos = idx[val];                 
-        nums[pos] = last;                   
-        idx[last] = pos;                    
-        nums.pop_back();                    
-        idx.erase(val);                     
+        if(st.find(val) == st.end())return false;
+        st.erase(val);
         return true;
     }
-
+    
     int getRandom() {
-        return nums[rand() % nums.size()];
+        return *next(st.begin(),rand()%st.size());
     }
 };
