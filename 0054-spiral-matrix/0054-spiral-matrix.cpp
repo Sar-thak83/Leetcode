@@ -1,86 +1,40 @@
-// class Solution {
-// public:
-//     vector<int> spiralOrder(vector<vector<int>>& matrix) {
-//         vector<int> ans;
-//         if (matrix.empty()) return ans;
-//         int count = 0;
-//         int row = matrix.size();
-//         int coloum = matrix[0].size();
-//         int start_coloum = 0;
-//         int start_row = 0;
-//         int end_coloum = coloum - 1;
-//         int end_row = row - 1;
-//         int total = row * coloum;
-//         while (count < total) {
-//             for (int index = start_coloum; count < total && index <= end_coloum;
-//                  index++) {
-//                 ans.push_back(matrix[start_row][index]);
-//                 count++;
-//             }
-//             start_row++;
-//             for (int index = start_row; count < total && index <= end_row;
-//                  index++) {
-//                 ans.push_back(matrix[index][end_coloum]);
-//                 count++;
-//             }
-//             end_coloum--;
-//             for (int index = end_coloum; count < total && index >= start_coloum;
-//                  index--) {
-//                 ans.push_back(matrix[end_row][index]);
-//                 count++;
-//             }
-//             end_row--;
-//             for (int index = end_row; count < total && index >= start_row;
-//                  index++) {
-//                 ans.push_back(matrix[index][start_coloum]);
-//                 count++;
-//             }
-//             start_coloum++;
-//         }
-//         return ans;
-//     }
-// };
-
-
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
-        vector<int> ans;
-        if (matrix.empty()) return ans;  
-        
-        int count = 0;
-        int row = matrix.size();
-        int column = matrix[0].size();  // Corrected spelling from "coloum" to "column"
-        int start_column = 0;
-        int start_row = 0;
-        int end_column = column - 1;  // Corrected spelling from "coloum" to "column"
-        int end_row = row - 1;
-        int total = row * column;
-
-        while (count < total) {
-            for (int index = start_column; count < total && index <= end_column; index++) {
-                ans.push_back(matrix[start_row][index]);
+        vector<int>ans;
+        if(matrix.empty()){
+            return ans;
+        }
+        int count=0;
+        int row=matrix.size();
+        int col=matrix[0].size();
+        int start_row=0;
+        int start_col=0;
+        int end_row=row-1;
+        int end_col=col-1;
+        int total=row*col;
+        while(count<total){
+            for(int i=start_col;count<total && i<=end_col;i++ ){
+                ans.push_back(matrix[start_row][i]);
                 count++;
             }
             start_row++;
-            for (int index = start_row; count < total && index <= end_row; index++) {
-                ans.push_back(matrix[index][end_column]);
+            for(int i=start_row;count<total && i<=end_row;i++){
+                ans.push_back(matrix[i][end_col]);
                 count++;
             }
-            end_column--;
-            for (int index = end_column; count < total && index >= start_column; index--) {
-                ans.push_back(matrix[end_row][index]);
+            end_col--;
+            for(int i=end_col;count<total && i>=start_col;i--){
+                ans.push_back(matrix[end_row][i]);
                 count++;
             }
             end_row--;
-            for (int index = end_row; count < total && index >= start_row; index--) {
-                ans.push_back(matrix[index][start_column]);
+            for(int i=end_row;count<total && i>=start_row;i--){
+                ans.push_back(matrix[i][start_col]);
                 count++;
             }
-            start_column++;
+            start_col++;
         }
         return ans;
     }
 };
-
-
