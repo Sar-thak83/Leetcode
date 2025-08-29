@@ -10,34 +10,29 @@
  */
 class Solution {
 public:
-    ListNode* merge(ListNode* headA, ListNode* headB) {
-        // if (headA == NULL) {
-        //     return headB;
-        // }
-        // if (headB == NULL) {
-        //     return headA;
-        // }
-        ListNode* ans = new ListNode(-1);
-        ListNode* temp = ans;
-        while (headA != NULL && headB != NULL) {
-            if (headA->val < headB->val) {
-                temp->next = headA;
-                temp = headA;
-                headA = headA->next;
-            } else {
-                temp->next = headB;
-                temp = headB;
-                headB = headB->next;
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        ListNode* ans=new ListNode(0);
+        ListNode* temp=ans;
+        while(list1!=NULL && list2!=NULL){
+            if(list1->val>list2->val){
+                temp->next=list2;
+                temp=list2;
+                list2=list2->next;
+            }
+            else{
+                temp->next=list1;
+                temp=list1;
+                list1=list1->next;
             }
         }
-        if (headA != NULL)
-            temp->next = headA;
-        else
-            temp->next = headB;
-        ans = ans->next;
+        if(list1!=NULL){
+            temp->next=list1;
+        }
+        else{
+            temp->next=list2;
+        }
+        ans=ans->next;
         return ans;
     }
-    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        return merge(list1, list2);
-    }
+
 };
