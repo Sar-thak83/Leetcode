@@ -1,19 +1,10 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
 class Solution {
 public:
-    ListNode* reverseLinklist(ListNode*& head) {
+    ListNode* reverse(ListNode* head) {
         ListNode* prev = NULL;
-        ListNode* forward = NULL;
         ListNode* curr = head;
+        ListNode* forward = NULL;
+
         while (curr != NULL) {
             forward = curr->next;
             curr->next = prev;
@@ -22,22 +13,30 @@ public:
         }
         return prev;
     }
+
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        head = reverseLinklist(head);
-        ListNode* temp = head;
-        if (n == 1) {
-            ListNode* newNode = head->next;
-            delete head;
-            return reverseLinklist(newNode);
+        if (!head) return nullptr;
+
+        head = reverse(head);
+
+        ListNode* dummy = new ListNode(0, head);
+        ListNode* prev = dummy;
+        ListNode* curr = head;
+        int count = 1;
+
+        while (curr && count < n) {
+            prev = curr;
+            curr = curr->next;
+            count++;
         }
-        for (int i = 1; i < n - 1 && temp != NULL; i++) {
-            temp = temp->next;
+
+        if (curr) {
+            prev->next = curr->next;
+            delete curr;
         }
-        if (temp != NULL && temp->next != NULL) {
-            ListNode* nodeToDelete = temp->next;
-            temp->next = temp->next->next;
-            delete nodeToDelete;
-        }
-        return reverseLinklist(head);
+
+        head = reverse(dummy->next);
+        delete dummy;
+        return head;
     }
 };
