@@ -11,24 +11,22 @@
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-        ListNode* temp=new ListNode(0);
-        temp->next=head;
-        ListNode* curr=head;
-        ListNode* prev=temp;
-        while(curr!=NULL){
-            if(curr->next!=NULL && curr->val==curr->next->val){
-                int value=curr->val;
-                while(curr!=NULL && curr->val==value){
-                    curr=curr->next;
-                }
-                prev->next=curr;
-            }
-            else
-            {
-                prev=curr;
-                curr=curr->next;
-            }
+        unordered_map<int,int>count;
+        ListNode* temp=head;
+        while(temp!=NULL){
+            count[temp->val]++;
+            temp=temp->next;
         }
-        return temp->next;
+        ListNode* dummy = new ListNode(0);
+        ListNode* curr = dummy;
+        temp=head;
+        while (temp != NULL) {
+            if (count[temp->val] == 1) { 
+                curr->next = new ListNode(temp->val);
+                curr = curr->next;
+            }
+            temp = temp->next;
+        }
+        return dummy->next;
     }
 };
