@@ -15,14 +15,14 @@ public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
         if (p == NULL && q == NULL)
             return true;
-        if (p == NULL && q != NULL)
-            return false;
         if (p != NULL && q == NULL)
             return false;
-        bool left = (isSameTree(p->left, q->left));
-        bool right = (isSameTree(p->right, q->right));
-        bool value = p->val == q->val;
-        if (left && right && value)
+        if (p == NULL && q != NULL)
+            return false;
+        bool left = isSameTree(p->left, q->left);
+        bool right = isSameTree(p->right, q->right);
+        bool NodeVal = p->val == q->val;
+        if (left && right && NodeVal)
             return true;
         else
             return false;
