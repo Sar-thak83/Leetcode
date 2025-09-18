@@ -1,29 +1,44 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
+//--------Using BFS---------
+
+// class Solution {
+// public:
+//     bool isSymmetric(TreeNode* root) {
+//         if (!root) return true;
+//         queue<TreeNode*> q;
+//         q.push(root->left);
+//         q.push(root->right);
+//         while (!q.empty()) {
+//             TreeNode* left = q.front(); q.pop();
+//             TreeNode* right = q.front(); q.pop();
+//             if (!left && !right) continue;
+//             if (!left || !right) return false;
+//             if (left->val != right->val) return false;
+//             q.push(left->left);
+//             q.push(right->right);
+//             q.push(left->right);
+//             q.push(right->left);
+//         }
+//         return true;
+//     }
+// };
+
+// ----------Using recursive approach----------
+
 class Solution {
 public:
-    bool symmetric(TreeNode* root1, TreeNode* root2) {
-        if (root1 == NULL || root2 == NULL) {
-            return root1==root2;
-        }
-        return (root1->val== root2->val) &&
-               symmetric(root1->left, root2->right) &&
-               symmetric(root1->right, root2->left);
+    bool Symmetric(TreeNode* rootA, TreeNode* rootB) {
+        if (!rootA && !rootB)
+            return true;
+        if (!rootA || !rootB)
+            return false;
+        return (rootA->val == rootB->val) &&
+               Symmetric(rootA->left, rootB->right) &&
+               Symmetric(rootB->left, rootA->right);
     }
     bool isSymmetric(TreeNode* root) {
-        if (root == NULL)
+        if (root == NULL) {
             return true;
-        else
-            return symmetric(root->left, root->right);
+        }
+        return Symmetric(root->left, root->right);
     }
 };
