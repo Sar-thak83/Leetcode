@@ -5,23 +5,17 @@ public:
         
         if(i < 0 || j > i || j < 0)
             return 0.0;
-        
         if(i == 0 && j == 0)
             return t[i][j] = poured;
-        
         if(t[i][j] != -1)
             return t[i][j];
-        
-        double up_left  = (solve(poured, i - 1, j - 1) - 1) / 2.0;
-        
-        double up_right = (solve(poured, i - 1, j) - 1) / 2.0;
-            
+        double up_left  = (solve(poured, i - 1, j - 1) - 1) / 2;
+        double up_right = (solve(poured, i - 1, j) - 1) / 2;
          if(up_left < 0)
-            up_left = 0.0;
+            up_left = 0;
         
         if(up_right < 0)
-            up_right = 0.0;
-        
+            up_right = 0;
         return t[i][j] = up_left + up_right;
     }
     
@@ -32,6 +26,6 @@ public:
             }
         }
         
-        return min(1.0, solve(poured, query_row, query_glass));
+        return min(1.0,solve(poured, query_row, query_glass));
     }
 };
