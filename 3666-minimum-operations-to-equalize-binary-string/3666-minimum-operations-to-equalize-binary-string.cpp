@@ -10,11 +10,10 @@ public:
         }
 
         if(startZeros == 0) {
-            return 0; //no operations required
+            return 0; 
         }
 
         vector<int> operations(n+1, -1);
-        //operations[z] = min operations required to reach state in which we have z 0s
 
         set<int> evenSet;
         set<int> oddSet;
