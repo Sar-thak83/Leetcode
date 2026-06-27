@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0200-number-of-islands](https://github.com/Sar-thak83/Leetcode/tree/main/0200-number-of-islands/) | Medium |
+| [0322-coin-change](https://github.com/Sar-thak83/Leetcode/tree/main/0322-coin-change/) | Medium |
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/Sar-thak83/Leetcode/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/Sar-thak83/Leetcode/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Sar-thak83/Leetcode/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
@@ -53,6 +54,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0322-coin-change](https://github.com/Sar-thak83/Leetcode/tree/main/0322-coin-change/) | Medium |
 | [1888-minimum-number-of-flips-to-make-the-binary-string-alternating](https://github.com/Sar-thak83/Leetcode/tree/main/1888-minimum-number-of-flips-to-make-the-binary-string-alternating/) | Medium |
 | [3129-find-all-possible-stable-binary-arrays-i](https://github.com/Sar-thak83/Leetcode/tree/main/3129-find-all-possible-stable-binary-arrays-i/) | Medium |
 | [3130-find-all-possible-stable-binary-arrays-ii](https://github.com/Sar-thak83/Leetcode/tree/main/3130-find-all-possible-stable-binary-arrays-ii/) | Hard |
@@ -135,4 +137,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0200-number-of-islands](https://github.com/Sar-thak83/Leetcode/tree/main/0200-number-of-islands/) | Medium |
+| [0322-coin-change](https://github.com/Sar-thak83/Leetcode/tree/main/0322-coin-change/) | Medium |
 <!---LeetCode Topics End-->
