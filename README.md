@@ -40,6 +40,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0344-reverse-string](https://github.com/Sar-thak83/Leetcode/tree/main/0344-reverse-string/) | Easy |
 | [1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n](https://github.com/Sar-thak83/Leetcode/tree/main/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/) | Medium |
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/Sar-thak83/Leetcode/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
 | [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/Sar-thak83/Leetcode/tree/main/1758-minimum-changes-to-make-alternating-binary-string/) | Easy |
@@ -136,6 +137,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0015-3sum](https://github.com/Sar-thak83/Leetcode/tree/main/0015-3sum/) | Medium |
 | [0075-sort-colors](https://github.com/Sar-thak83/Leetcode/tree/main/0075-sort-colors/) | Medium |
 | [0283-move-zeroes](https://github.com/Sar-thak83/Leetcode/tree/main/0283-move-zeroes/) | Easy |
+| [0344-reverse-string](https://github.com/Sar-thak83/Leetcode/tree/main/0344-reverse-string/) | Easy |
 | [3643-flip-square-submatrix-vertically](https://github.com/Sar-thak83/Leetcode/tree/main/3643-flip-square-submatrix-vertically/) | Easy |
 ## Depth-First Search
 | Problem Name | Difficulty |
