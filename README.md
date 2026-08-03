@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0200-number-of-islands](https://github.com/Sar-thak83/Leetcode/tree/main/0200-number-of-islands/) | Medium |
+| [0283-move-zeroes](https://github.com/Sar-thak83/Leetcode/tree/main/0283-move-zeroes/) | Easy |
 | [0322-coin-change](https://github.com/Sar-thak83/Leetcode/tree/main/0322-coin-change/) | Medium |
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/Sar-thak83/Leetcode/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/Sar-thak83/Leetcode/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
@@ -128,6 +129,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0283-move-zeroes](https://github.com/Sar-thak83/Leetcode/tree/main/0283-move-zeroes/) | Easy |
 | [3643-flip-square-submatrix-vertically](https://github.com/Sar-thak83/Leetcode/tree/main/3643-flip-square-submatrix-vertically/) | Easy |
 ## Depth-First Search
 | Problem Name | Difficulty |
