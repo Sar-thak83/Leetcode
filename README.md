@@ -6,6 +6,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/Sar-thak83/Leetcode/tree/main/0015-3sum/) | Medium |
 | [0200-number-of-islands](https://github.com/Sar-thak83/Leetcode/tree/main/0200-number-of-islands/) | Medium |
 | [0283-move-zeroes](https://github.com/Sar-thak83/Leetcode/tree/main/0283-move-zeroes/) | Easy |
 | [0322-coin-change](https://github.com/Sar-thak83/Leetcode/tree/main/0322-coin-change/) | Medium |
@@ -124,11 +125,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/Sar-thak83/Leetcode/tree/main/0015-3sum/) | Medium |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Sar-thak83/Leetcode/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
 | [3567-minimum-absolute-difference-in-sliding-submatrix](https://github.com/Sar-thak83/Leetcode/tree/main/3567-minimum-absolute-difference-in-sliding-submatrix/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/Sar-thak83/Leetcode/tree/main/0015-3sum/) | Medium |
 | [0283-move-zeroes](https://github.com/Sar-thak83/Leetcode/tree/main/0283-move-zeroes/) | Easy |
 | [3643-flip-square-submatrix-vertically](https://github.com/Sar-thak83/Leetcode/tree/main/3643-flip-square-submatrix-vertically/) | Easy |
 ## Depth-First Search
